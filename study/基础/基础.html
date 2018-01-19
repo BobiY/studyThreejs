@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas{
+            width: 100%;
+            height: 600px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas"></div>
+    <script src="../three.js"></script>
+</body>
+    <script>
+        // 获得画布
+        var renderer = new THREE.WebGLRenderer({
+//            antialias : true
+        });  //
+        renderer.setSize(400,500)  // 设置画布大小
+        document.getElementById("canvas").appendChild(renderer.domElement)
+
+        var scene = new THREE.Scene();
+
+        var camera = new THREE.PerspectiveCamera(30,4/5,1,5); // 值得设置很重要
+
+        /**
+         *  45 代表的是视角能看到的角度
+         *  4/5 是画布的长宽比，保证可以看到整个画布的内容
+         *  5 表示最近的面里相机的距离
+         *  100 表示最远的面离相机的距离
+         *  注意：物体应该全包裹在最近最远范围内的可视范围内，不然看到的是不全的
+         * */
+        camera.position.set(0, 0, 5);  //  这里是相机放的位置
+        scene.add(camera);
+    /**
+     *  如果 最近距离和图像 Z 轴的距离之和大于相机位置，那么将看不到图形的全部，只有两者之和小于等于相机的位置
+     *  才能看到图形的全貌
+     * */
+        var cube = new THREE.Mesh(new THREE.CubeGeometry(1, 1, 1),
+            new THREE.MeshBasicMaterial({
+                color: 0xff0000,
+                wireframe: true
+            })
+        );
+        scene.add(cube);
+
+        renderer.render(scene,camera)
+    </script>
+</html>
