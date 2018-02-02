@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content{
+            width: 600px;
+            height: 600px;
+            border: 1px solid #333;
+            position: relative;
+        }
+        .center,.pos{
+            width: 10px;
+            height:10px;
+            background: #999;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .pos{
+
+        }
+        .center{
+            left: 295px;
+            top:295px;
+        }
+        .pos1{
+            left:245px;
+            top:295px
+        }
+        .pos4{
+            left:345px;
+            top:295px
+        }
+        .pos2{
+            left:265px;
+            top:335px;
+        }
+
+        .pos3{
+            left:325px;
+            top:335px;
+        }
+
+        .pos5{
+            left:265px;
+            top:255px;
+        }
+
+        .pos6{
+            left:325px;
+            top:255px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="center"></div>
+        <div class="pos pos1">1</div>
+        <div class="pos pos2">2</div>
+        <div class="pos pos3">3</div>
+        <div class="pos pos4">4</div>
+        <div class="pos pos5">5</div>
+        <div class="pos pos6">6</div>
+    </div>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script>
+        /**
+         * 1 和 4 需要相对运行 x 轴， 正负 50 直线运动
+         * 6 和 2 需要相对运动 x 轴正负 30 y 轴正负 40  这个是抛物线运动
+         * 3 和 5 需要相对运动 x 轴正负 30 y 轴正负 40  这个是抛物线运动
+        */
+        const arr = [];  // 根据位置计算运动位置
+        $(".pos").each( (index,item) => {
+            console.log($(item));
+        } )
+    </script>
+</body>
+</html>

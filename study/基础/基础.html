@@ -18,14 +18,14 @@
     <script>
         // 获得画布
         var renderer = new THREE.WebGLRenderer({
-//            antialias : true
+            antialias : true
         });  //
         renderer.setSize(400,500)  // 设置画布大小
-        document.getElementById("canvas").appendChild(renderer.domElement)
+        document.getElementById("canvas").appendChild(renderer.domElement) // 如果不是自己创建的 canvas ，则要自己将 three 创建的 canvas 加入到指定的元素中
 
-        var scene = new THREE.Scene();
+        var scene = new THREE.Scene(); // 获取绘画场景
 
-        var camera = new THREE.PerspectiveCamera(30,4/5,1,5); // 值得设置很重要
+        var camera = new THREE.PerspectiveCamera(30,4/5,1,1000); // 参数的设置很重要
 
         /**
          *  45 代表的是视角能看到的角度

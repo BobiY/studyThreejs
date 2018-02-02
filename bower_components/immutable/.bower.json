@@ -1,0 +1,50 @@
+{
+  "name": "immutable",
+  "description": "Immutable Data Collections",
+  "license": "MIT",
+  "homepage": "https://github.com/facebook/immutable-js",
+  "author": {
+    "name": "Lee Byron",
+    "homepage": "https://github.com/leebyron"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/facebook/immutable-js.git"
+  },
+  "main": "dist/immutable.js",
+  "typescript": {
+    "definition": "dist/immutable.d.ts"
+  },
+  "ignore": [
+    "**/.*",
+    "__tests__",
+    "resources",
+    "src",
+    "type-definitions",
+    "package.json",
+    "Gruntfile.js"
+  ],
+  "keywords": [
+    "immutable",
+    "persistent",
+    "lazy",
+    "data",
+    "datastructure",
+    "functional",
+    "collection",
+    "stateless",
+    "sequence",
+    "iteration"
+  ],
+  "version": "3.8.2",
+  "_release": "3.8.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.8.2",
+    "commit": "cda85daa677965fa466bdfb0f93bf3798d785ec4"
+  },
+  "_source": "https://github.com/facebook/immutable-js.git",
+  "_target": "^3.8.2",
+  "_originalSource": "immutable",
+  "_direct": true
+}
